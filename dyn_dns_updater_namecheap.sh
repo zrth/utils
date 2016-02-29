@@ -1,4 +1,8 @@
 #!/bin/bash
+# updated dyn dns, works with namecheap
+# replace host if you want to set a A reccord for a subdomain
+# spring 2016 
+
 
 
 host='@' # subdomain
