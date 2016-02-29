@@ -14,8 +14,7 @@ echo "starting dyndns" | logger
 ip=`curl ifconfig.co 2>/dev/null`
 
 if [[ ! $ip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
-echo "bad!"
-echo "bad ip returned" | logger
+echo "potentially malicous 'ip' returned. exiting. " | logger
 exit
 fi
 
