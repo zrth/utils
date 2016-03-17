@@ -1,0 +1,12 @@
+# simpler dockering, add to /etc/profiles
+
+function denter {
+  usage="usage: denter [hostname]"
+  if [ $# -eq 0 ]
+  then
+    echo $usage
+    docker ps
+    return
+  fi
+  docker exec -it $1 bash -l
+}
